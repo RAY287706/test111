@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Resanaeni!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scene 1: Tiup Lilin -->
+    <section id="scene1" class="scene active">
+        <div class="birthday-container">
+            <h1 class="birthday-title">Cie udh 23thn lagi</h1>
+            <h2 class="name">Sayangnyaaku Resanaeni</h2>
+            
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="cake-layer layer3"></div>
+                    <div class="cake-layer layer2"></div>
+                    <div class="cake-layer layer1"></div>
+                    
+                    <div class="candles">
+                        <div class="candle">
+                            <div class="flame" id="flame1"></div>
+                            <div class="wick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame" id="flame2"></div>
+                            <div class="wick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame" id="flame3"></div>
+                            <div class="wick"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="blow-instruction">Klik untuk meniup lilin! 🎂</p>
+            <button id="blowBtn" class="blow-btn">Tiup Lilin</button>
+        </div>
+    </section>
+
+    <!-- Scene 2: Album -->
+    <section id="scene2" class="scene">
+        <div class="album-container">
+            <h2 class="album-title">Album Kenangan</h2>
+            
+            <div class="album-book">
+                <div class="page-counter">
+                    Halaman <span id="currentPage">1</span> dari 5
+                </div>
+                
+                <div class="album-page active" data-page="1">
+                    <div class="photo-frame">
+                        <img src="1.JPG" alt="Foto kenangan 1" class="album-photo">
+                        <p class="photo-caption">ini lagi kondangan</p>
+                    </div>
+                </div>
+                
+                <div class="album-page" data-page="2">
+                    <div class="photo-frame">
+                        <img src="2.JPG" alt="Foto kenangan 2" class="album-photo">
+                        <p class="photo-caption">Ini photo ke mau nangkep penjahat</p>
+                    </div>
+                </div>
+                
+                <div class="album-page" data-page="3">
+                    <div class="photo-frame">
+                        <img src="3.JPG" alt="Foto kenangan 3" class="album-photo">
+                        <p class="photo-caption">baru beres world war z</p>
+                    </div>
+                </div>
+                
+                <div class="album-page" data-page="4">
+                    <div class="photo-frame">
+                        <img src="4.JPG" alt="Foto kenangan 4" class="album-photo">
+                        <p class="photo-caption">ini photo disurprise in ayangnyaacun</p>
+                    </div>
+                </div>
+                
+                <div class="album-page" data-page="5">
+                    <div class="photo-frame">
+                        <img src="5.JPG" alt="Foto kenangan 5" class="album-photo">
+                        <p class="photo-caption">ini lagi mantai, sekalian di omongin</p>
+                    </div>
+                </div>
+                
+                <div class="album-controls">
+                    <button id="prevBtn" class="album-btn">← Sebelumnya</button>
+                    <button id="nextBtn" class="album-btn">Selanjutnya →</button>
+                </div>
+            </div>
+            
+            <button id="toGiftsBtn" class="continue-btn">Lanjut ke Kado</button>
+        </div>
+    </section>
+
+    <!-- Scene 3: Pilihan Kado -->
+    <section id="scene3" class="scene">
+        <div class="gifts-container">
+            <h2 class="gifts-title">Pilih Kado untuk Resanaeni</h2>
+            <p class="gifts-subtitle">Pilih salah satu kado yang ingin kamu berikan:</p>
+            
+            <div class="gifts-grid">
+                <div class="gift-option" data-gift="baju">
+                    <div class="gift-icon">👕</div>
+                    <h3>A. Baju & Celana</h3>
+                    <p>Pakaian cantik untuk tampil memukau</p>
+                </div>
+                
+                <div class="gift-option" data-gift="sepatu">
+                    <div class="gift-icon">👠</div>
+                    <h3>B. Sepatu</h3>
+                    <p>Sepatu keren untuk melangkah percaya diri</p>
+                </div>
+                
+                <div class="gift-option" data-gift="uang">
+                    <div class="gift-icon">💰</div>
+                    <h3>C. Cairkan Uang</h3>
+                    <p>Uang cash untuk kebutuhan yang diinginkan</p>
+                </div>
+                
+                <div class="gift-option" data-gift="other">
+                    <div class="gift-icon">🎁</div>
+                    <h3>D. Other</h3>
+                    <p>Kejutan spesial lainnya</p>
+                </div>
+            </div>
+            
+            <div id="giftResult" class="gift-result hidden">
+                <h3>Kado yang dipilih:</h3>
+                <p id="selectedGift"></p>
+                <button id="resetBtn" class="reset-btn">Pilih Lagi</button>
+            </div>
+        </div>
+    </section>
+    
+<audio id="bg-music" loop>
+  <source src="image/lagu.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener("click", function() {
+    let audio = document.getElementById("bg-music");
+    audio.play();
+  }, { once: true });
+</script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
